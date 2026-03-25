@@ -20,3 +20,49 @@ body {
 :root {
     --altura-header: 90px;
 }
+
+.interface {
+    width: min(1280px, 90%);
+    margin: 0 auto;
+}
+
+header {
+    height: var(--altura-header);
+    padding: 10px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #000;
+}
+
+header > .interface {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 70px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    padding: 0 30px;
+}
+
+header a {
+    color: #a1a1a1;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+}
+
+header a:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
