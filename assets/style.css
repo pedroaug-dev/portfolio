@@ -66,3 +66,99 @@ header a:hover {
     color: #fff;
     transform: scale(1.05);
 }
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #3C3CE8;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    color: #fff;
+}
+
+.btn-contato button:hover {
+    box-shadow: 0 0 8px #3C3CE8;
+}
+
+main {
+    flex: 1;
+}
+
+section {
+    min-height: calc(100vh - var(--altura-header));
+    display: flex;
+    align-items: center;
+    scroll-margin-top: var(--altura-header);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.txt-topo-site {
+    flex: 1;
+}
+
+.txt-topo-site h1 {
+    font-size: 42px;
+}
+
+.txt-topo-site h1 span {
+    color: #3C3CE8;
+}
+
+.txt-topo-site p {
+    margin: 25px 0;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.img-topo-site {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+.container-img {
+    background-color: #3C3CE8;
+    box-shadow: 0 0 12px #3C3CE8;
+    height: 350px;
+    width: 230px;
+    overflow: hidden;
+    border-radius: 200px;
+    position: relative;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+
+.container-img:hover {
+    box-shadow: 0 0 30px #3C3CE8;
+}
+
+.container-img img {
+    height: 370px;
+    position: relative;
+    left: -5%;
+}
+
+.secao {
+    text-align: center;
+}
+
+.secao h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.secao p {
+    color: #a1a1a1;
+    max-width: 600px;
+    margin: 0 auto;
+}
