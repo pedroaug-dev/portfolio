@@ -149,6 +149,16 @@ button {
     min-width: 0;
 }
 
+#conteudo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+#conteudo > section {
+    min-width: 0;
+}
+
 .site-header {
     position: sticky;
     top: 0;
@@ -257,7 +267,9 @@ button {
 .hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
-    gap: 58px;
+    grid-template-rows: auto auto;
+    column-gap: 58px;
+    row-gap: 16px;
     align-items: center;
 }
 
@@ -273,6 +285,8 @@ button {
 }
 
 .hero-copy {
+    grid-column: 1;
+    grid-row: 1 / span 2;
     max-width: 720px;
 }
 
@@ -381,9 +395,11 @@ h3 {
 
 .hero-visual {
     position: relative;
+    grid-column: 2;
+    grid-row: 1;
     display: grid;
     justify-items: center;
-    gap: 16px;
+    align-self: end;
 }
 
 .profile-frame {
@@ -414,7 +430,12 @@ h3 {
 }
 
 .profile-panel {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    align-self: start;
     width: min(320px, 100%);
+    margin-top: 0;
     padding: 16px 18px;
     color: #ffffff;
     background: var(--dark);
@@ -460,6 +481,8 @@ h3 {
     background: rgba(255, 255, 255, 0.92);
     border: 1px solid var(--line);
     border-radius: var(--radius);
+    min-width: 0;
+    overflow-wrap: anywhere;
     transition:
         transform 0.36s var(--ease-out),
         border-color 0.36s var(--ease-out),
@@ -2058,7 +2081,9 @@ body.reveal-ready [data-reveal].is-visible {
 
     .hero-grid {
         grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
-        gap: 42px;
+        grid-template-rows: auto auto;
+        column-gap: 42px;
+        row-gap: 16px;
     }
 
     .profile-frame {
@@ -2075,25 +2100,84 @@ body.reveal-ready [data-reveal].is-visible {
 }
 
 @media (max-width: 980px) {
+    #inicio {
+        order: 1;
+    }
+
+    .metrics {
+        order: 2;
+    }
+
+    #projetos {
+        order: 3;
+    }
+
+    #sobre {
+        order: 4;
+    }
+
+    #competencias {
+        order: 5;
+    }
+
+    #areas {
+        order: 6;
+    }
+
+    #formacao {
+        order: 7;
+    }
+
+    #objetivo {
+        order: 8;
+    }
+
+    #contato {
+        order: 9;
+    }
+
     .nav-shell {
         display: grid;
         grid-template-columns: auto auto;
+        min-height: 66px;
+        gap: 8px 12px;
+        padding-block: 8px;
+    }
+
+    .brand {
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .main-nav {
         grid-column: 1 / -1;
+        grid-row: 2;
         width: 100%;
         justify-content: flex-start;
         overflow-x: auto;
-        padding-bottom: 2px;
+        flex-wrap: nowrap;
+        gap: 4px;
+        padding-bottom: 0;
     }
 
     .nav-cta {
+        grid-column: 2;
+        grid-row: 1;
         justify-self: end;
     }
 
     .hero {
         padding-top: 52px;
+    }
+
+    .hero-grid {
+        gap: 26px;
+    }
+
+    .hero-copy {
+        grid-column: 1;
+        grid-row: auto;
+        order: 3;
     }
 
     .hero-grid,
@@ -2105,10 +2189,23 @@ body.reveal-ready [data-reveal].is-visible {
     .career-grid,
     .contact-grid {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 
     .hero-visual {
+        grid-column: 1;
+        grid-row: auto;
+        order: 1;
         justify-items: start;
+        align-self: auto;
+    }
+
+    .profile-panel {
+        grid-column: 1;
+        grid-row: auto;
+        order: 2;
+        justify-self: start;
+        margin-top: 0;
     }
 
     .metrics-grid {
@@ -2128,6 +2225,21 @@ body.reveal-ready [data-reveal].is-visible {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    #competencias .tech-page {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(3, minmax(160px, auto));
+    }
+
+    #competencias .tech-page-backend {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(160px, auto));
+    }
+
+    #competencias .tech-page-backend .tech-card {
+        flex-basis: auto;
+    }
+
     .area-carousel {
         grid-auto-columns: calc((100% - 18px) / 2);
     }
@@ -2144,15 +2256,18 @@ body.reveal-ready [data-reveal].is-visible {
         grid-template-columns: 1fr;
     }
 
-    .project-carousel,
+    .project-carousel {
+        grid-auto-columns: calc((100% - 18px) / 2);
+    }
+
     .formation-carousel {
-        grid-auto-columns: minmax(280px, 72%);
+        grid-auto-columns: 100%;
     }
 }
 
 @media (max-width: 760px) {
     .hero-grid {
-        gap: 34px;
+        gap: 24px;
     }
 
     .hero-visual {
@@ -2165,6 +2280,7 @@ body.reveal-ready [data-reveal].is-visible {
 
     .profile-panel {
         width: min(310px, 88vw);
+        justify-self: center;
     }
 
     .about-panel {
@@ -2180,22 +2296,20 @@ body.reveal-ready [data-reveal].is-visible {
         grid-template-rows: none;
     }
 
-    #competencias .tech-page {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        grid-template-rows: repeat(2, minmax(138px, auto));
-    }
-
+    #competencias .tech-page,
     #competencias .tech-page-backend {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
     }
 
     #competencias .tech-page-backend .tech-card {
-        flex-basis: calc((100% - 42px) / 4);
+        flex-basis: auto;
     }
 
     #competencias .tech-card {
-        min-height: 138px;
-        padding: 14px;
+        min-height: 150px;
+        padding: 16px;
     }
 
     #competencias .tech-icon {
@@ -2218,16 +2332,16 @@ body.reveal-ready [data-reveal].is-visible {
     .project-carousel,
     .formation-carousel {
         gap: 14px;
-        grid-auto-columns: minmax(250px, 84%);
+        grid-auto-columns: 100%;
     }
 
     .area-carousel {
         gap: 14px;
-        grid-auto-columns: minmax(250px, 84%);
+        grid-auto-columns: 100%;
     }
 
     .project-carousel .project-card {
-        min-height: 226px;
+        min-height: auto;
     }
 
     .contact-actions a {
@@ -2245,22 +2359,37 @@ body.reveal-ready [data-reveal].is-visible {
     }
 
     .nav-shell {
-        min-height: 68px;
-        gap: 12px;
+        min-height: auto;
+        gap: 4px 8px;
+        padding-block: 6px;
     }
 
     .brand-text {
         display: none;
     }
 
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+        font-size: 0.76rem;
+    }
+
     .nav-cta {
-        min-height: 40px;
-        padding-inline: 13px;
+        min-height: 34px;
+        padding-inline: 10px;
+        font-size: 0.86rem;
     }
 
     .main-nav a {
-        padding: 8px 10px;
+        padding: 4px 8px;
         white-space: nowrap;
+        font-size: 0.84rem;
+        line-height: 1.2;
+    }
+
+    .main-nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
     }
 
     .eyebrow,
@@ -2304,7 +2433,16 @@ body.reveal-ready [data-reveal].is-visible {
 
     .section {
         padding: 66px 0;
-        scroll-margin-top: 120px;
+        scroll-margin-top: 112px;
+    }
+
+    .project-carousel,
+    .tech-carousel,
+    .area-carousel,
+    .formation-carousel {
+        --fade-edge: 14px;
+        padding-inline: 0;
+        margin-inline: 0;
     }
 
     .metrics {
@@ -2339,25 +2477,25 @@ body.reveal-ready [data-reveal].is-visible {
     }
 
     #competencias .tech-page {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
     }
 
     #competencias .tech-page-backend {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     #competencias .tech-page-backend .tech-card {
-        flex-basis: calc((100% - 24px) / 4);
+        flex-basis: auto;
     }
 
     .project-carousel,
     .formation-carousel {
-        grid-auto-columns: minmax(260px, 88%);
+        grid-auto-columns: 100%;
     }
 
     .area-carousel {
-        grid-auto-columns: minmax(260px, 88%);
+        grid-auto-columns: 100%;
     }
 
     .formation-card {
@@ -2401,19 +2539,19 @@ body.reveal-ready [data-reveal].is-visible {
     }
 
     .brand-mark {
-        width: 38px;
-        height: 38px;
+        width: 34px;
+        height: 34px;
     }
 
     .nav-cta {
-        min-height: 38px;
-        padding-inline: 12px;
-        font-size: 0.9rem;
+        min-height: 34px;
+        padding-inline: 10px;
+        font-size: 0.86rem;
     }
 
     .main-nav {
-        margin-inline: -11px;
-        padding-inline: 11px;
+        margin-inline: 0;
+        padding-inline: 0;
     }
 
     .hero {
@@ -2442,21 +2580,21 @@ body.reveal-ready [data-reveal].is-visible {
     }
 
     #competencias .tech-page {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        grid-template-rows: repeat(2, minmax(118px, auto));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: none;
     }
 
     #competencias .tech-page-backend {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     #competencias .tech-page-backend .tech-card {
-        flex-basis: calc((100% - 24px) / 4);
+        flex-basis: auto;
     }
 
     #competencias .tech-card {
-        min-height: 118px;
-        padding: 10px 8px;
+        min-height: 132px;
+        padding: 12px 10px;
     }
 
     #competencias .tech-icon {
@@ -2475,11 +2613,11 @@ body.reveal-ready [data-reveal].is-visible {
 
     .project-carousel,
     .formation-carousel {
-        grid-auto-columns: minmax(238px, 91%);
+        grid-auto-columns: 100%;
     }
 
     .area-carousel {
-        grid-auto-columns: minmax(238px, 91%);
+        grid-auto-columns: 100%;
     }
 
     .contact-status {
@@ -2515,13 +2653,15 @@ body.reveal-ready [data-reveal].is-visible {
         min-height: 46px;
     }
 
-    .project-carousel,
-    .formation-carousel {
-        grid-auto-columns: minmax(220px, 94%);
+    #competencias .tech-page,
+    #competencias .tech-page-backend {
+        grid-template-columns: 1fr;
     }
 
+    .project-carousel,
+    .formation-carousel,
     .area-carousel {
-        grid-auto-columns: minmax(220px, 94%);
+        grid-auto-columns: 100%;
     }
 }
 
