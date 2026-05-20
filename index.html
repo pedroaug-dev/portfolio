@@ -1,91 +1,1905 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Pedro Augusto, Web & Data Developer com foco em Python, TypeScript, Django, Pandas, React, Node.js, Next.js e PostgreSQL."
+    />
+    <title>Pedro Augusto | Web & Data Developer</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230b1220'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial,sans-serif' font-size='24' font-weight='700' fill='%23ffffff'%3EPA%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <path d="m9 18-6-6 6-6"></path>
+        <path d="m15 6 6 6-6 6"></path>
+      </symbol>
+      <symbol id="icon-server" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="6" rx="2"></rect>
+        <rect x="3" y="14" width="18" height="6" rx="2"></rect>
+        <path d="M7 7h.01M7 17h.01"></path>
+      </symbol>
+      <symbol id="icon-database" viewBox="0 0 24 24">
+        <ellipse cx="12" cy="5" rx="8" ry="3"></ellipse>
+        <path d="M4 5v10c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path>
+        <path d="M4 10c0 1.7 3.6 3 8 3s8-1.3 8-3"></path>
+      </symbol>
+      <symbol id="icon-tool" viewBox="0 0 24 24">
+        <path
+          d="M14.7 6.3a4 4 0 0 0-5 5L4 17v3h3l5.7-5.7a4 4 0 0 0 5-5l-2.8 2.8-3-3 2.8-2.8Z"
+        ></path>
+      </symbol>
+      <symbol id="icon-layers" viewBox="0 0 24 24">
+        <path d="m12 3 9 5-9 5-9-5 9-5Z"></path>
+        <path d="m3 13 9 5 9-5"></path>
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+        <path d="m3 7 9 6 9-6"></path>
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path
+          d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4V9h4v1.4A4.7 4.7 0 0 1 16 8Z"
+        ></path>
+        <rect x="2" y="9" width="4" height="11"></rect>
+        <circle cx="4" cy="4" r="2"></circle>
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path
+          d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.2-.4 6.5-1.6 6.5-7A5.4 5.4 0 0 0 19 3.7 5 5 0 0 0 18.9 0S17.7-.4 15 1.5a13.4 13.4 0 0 0-7 0C5.3-.4 4.1 0 4.1 0A5 5 0 0 0 4 3.7a5.4 5.4 0 0 0-1.5 3.8c0 5.4 3.3 6.6 6.5 7A4.8 4.8 0 0 0 8 18v4"
+        ></path>
+        <path d="M8 19c-3 .9-3-1.5-4-2"></path>
+      </symbol>
+    </svg>
 
-<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<header>
-    <div class="interface">
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo do Portfólio">
-        </div>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="#inicio" aria-label="Ir para o início">
+          <span class="brand-mark">PA</span>
+          <span class="brand-text">Pedro Augusto</span>
+        </a>
 
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#especialidades">Especialidades</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-            </ul>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#competencias">Stack</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#formacao">Formação</a>
+          <a href="#objetivo">Objetivo</a>
+          <a href="#contato">Contato</a>
         </nav>
 
-        <div class="btn-contato" href="mailto:pedroaugustoguimaraesantos@gmail.com">
-            <button>Contato</button>
-        </div>
-    </div>
-</header>
+        <a class="nav-cta" href="mailto:pedroaugustoguimaraesantos@gmail.com"
+          >Contratar</a
+        >
+      </div>
+    </header>
 
-<main>
-
-<section id="inicio" class="topo-do-site">
-    <div class="interface flex">
-
-        <div class="txt-topo-site">
-            <h1>Olá, eu sou Pedro Augusto<span>.</span></h1>
-
-            <p>
-                Desenvolvedor em formação focado em Web Development, Automação e Análise de Dados, apaixonado por transformar ideias em soluções digitais eficientes, escaláveis e orientadas a dados.
+    <main id="conteudo">
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>Web & Data Developer.</h1>
+            <p class="hero-lead">
+              Desenvolvimento web e análise de dados com foco em soluções úteis,
+              claras e escaláveis.
             </p>
 
-            <div class="btn-contato">
-                <button>Entre em contato</button>
+            <div class="hero-actions" aria-label="Ações principais">
+              <a
+                class="button primary"
+                href="mailto:pedroaugustoguimaraesantos@gmail.com"
+                >Fale comigo</a
+              >
+              <a class="button secondary" href="#projetos">Ver projetos</a>
             </div>
-        </div>
+          </div>
 
-        <div class="img-topo-site">
-            <div class="container-img">
-                <img src="images/pessoa.png" alt="Foto de Pedro Augusto">
+          <div
+            class="hero-visual"
+            aria-label="Foto profissional de Pedro Augusto"
+          >
+            <figure class="profile-frame">
+              <img src="images/profile/pedro-augusto.png" alt="Pedro Augusto" />
+            </figure>
+            <div class="profile-panel">
+              <span>Posicionamento</span>
+              <strong>Web & Data Developer</strong>
             </div>
+          </div>
         </div>
+      </section>
 
-    </div>
-</section>
+      <section class="metrics" aria-label="Destaques">
+        <div class="container metrics-grid">
+          <article>
+            <span class="icon-badge"
+              ><svg class="icon"><use href="#icon-code"></use></svg
+            ></span>
+            <strong>Desenvolvimento web</strong>
+            <p>Aplicações completas, responsivas e integradas.</p>
+          </article>
+          <article>
+            <span class="icon-badge"
+              ><svg class="icon"><use href="#icon-server"></use></svg
+            ></span>
+            <strong>Backends e APIs</strong>
+            <p>Estruturas consistentes para sistemas conectados.</p>
+          </article>
+          <article>
+            <span class="icon-badge"
+              ><svg class="icon"><use href="#icon-database"></use></svg
+            ></span>
+            <strong>Análise de dados</strong>
+            <p>Indicadores claros para apoiar decisões.</p>
+          </article>
+        </div>
+      </section>
 
-<section id="especialidades" class="secao">
-    <div class="interface">
-        <h2>Especialidades</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, eum, harum rem iure rerum velit eius nihil aliquid repudiandae odit totam sint quaerat temporibus maxime saepe inventore officiis, id fugit!</p>
-    </div>
-</section>
+      <section class="section about-section" id="sobre">
+        <div class="container about-grid">
+          <div class="about-intro">
+            <p class="section-kicker">Sobre</p>
+            <h2>Desenvolvimento web e análise de dados.</h2>
+            <p>
+              Construo aplicações web, APIs e análises de dados com foco em
+              eficiência, clareza e geração de valor.
+            </p>
+          </div>
 
-<section id="sobre" class="secao">
-    <div class="interface">
-        <h2>Sobre Mim</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In ratione cum nulla sunt magnam, culpa corporis, doloremque soluta architecto, laborum excepturi. Illum, ad commodi. Laudantium, eum aspernatur. Possimus, quaerat cum.</p>
-    </div>
-</section>
+          <div class="about-panel">
+            <div class="about-points">
+              <article>
+                <span>01</span>
+                <strong>Web</strong>
+                <p>Interfaces modernas e backends estruturados.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <strong>Análise</strong>
+                <p>Tratamento, leitura e interpretação de dados.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <strong>Produto</strong>
+                <p>Soluções alinhadas a objetivos e prazos.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<section id="projetos" class="secao">
-    <div class="interface">
-        <h2>Projetos</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ullam veniam neque aut corporis magnam vitae deleniti eligendi sunt ex voluptatibus, est ducimus fugiat error, nemo totam, quidem nobis beatae.</p>
-    </div>
-</section>
+      <section class="section" id="competencias" data-carousel-scope>
+        <div class="container">
+          <div class="carousel-head">
+            <div class="section-heading compact-heading">
+              <p class="section-kicker">Stack</p>
+              <h2>Ferramentas principais.</h2>
+            </div>
 
-</main>
+            <div class="carousel-actions" aria-label="Controles da stack">
+              <button
+                class="icon-button"
+                type="button"
+                data-carousel-prev
+                aria-label="Stack anterior"
+              >
+                ‹
+              </button>
+              <button
+                class="icon-button"
+                type="button"
+                data-carousel-next
+                aria-label="Próxima stack"
+              >
+                ›
+              </button>
+            </div>
+          </div>
 
-<footer>
-    <div class="interface">
-        <p>© 2026 - Pedro Augusto</p>
-    </div>
-</footer>
+          <div class="tech-carousel" data-carousel aria-label="Tecnologias">
+            <div class="tech-page">
+              <article class="tech-card">
+                <img src="assets/icons/html5.svg" alt="" class="tech-icon" />
+                <strong>HTML5</strong>
+                <span>Estrutura web</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/css3.svg" alt="" class="tech-icon" />
+                <strong>CSS3</strong>
+                <span>Estilo responsivo</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/javascript.svg" alt="" class="tech-icon" />
+                <strong>JavaScript</strong>
+                <span>Interação web</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/typescript.svg" alt="" class="tech-icon" />
+                <strong>TypeScript</strong>
+                <span>Web moderna</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/react.svg" alt="" class="tech-icon" />
+                <strong>React</strong>
+                <span>Interfaces</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/nextjs.svg" alt="" class="tech-icon" />
+                <strong>Next.js</strong>
+                <span>Aplicações React</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/tailwindcss.svg" alt="" class="tech-icon" />
+                <strong>Tailwind CSS</strong>
+                <span>Design responsivo</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/vite.svg" alt="" class="tech-icon" />
+                <strong>Vite</strong>
+                <span>Build frontend</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/vercel.svg" alt="" class="tech-icon" />
+                <strong>Vercel</strong>
+                <span>Deploy web</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/netlify.svg" alt="" class="tech-icon" />
+                <strong>Netlify</strong>
+                <span>Deploy web</span>
+              </article>
+            </div>
 
-</body>
+            <div class="tech-page tech-page-backend">
+              <article class="tech-card">
+                <img src="assets/icons/python.svg" alt="" class="tech-icon" />
+                <strong>Python</strong>
+                <span>Backend e dados</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/django.svg" alt="" class="tech-icon" />
+                <strong>Django</strong>
+                <span>APIs e sistemas</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/nodejs.svg" alt="" class="tech-icon" />
+                <strong>Node.js</strong>
+                <span>Serviços web</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/prisma.svg" alt="" class="tech-icon" />
+                <strong>Prisma</strong>
+                <span>ORM e dados</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/pandas.svg" alt="" class="tech-icon" />
+                <strong>Pandas</strong>
+                <span>Análise de dados</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/postgresql.svg" alt="" class="tech-icon" />
+                <strong>PostgreSQL</strong>
+                <span>Banco relacional</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/mysql.svg" alt="" class="tech-icon" />
+                <strong>MySQL</strong>
+                <span>Banco relacional</span>
+              </article>
+              <article class="tech-card">
+                <img src="assets/icons/docker.svg" alt="" class="tech-icon" />
+                <strong>Docker</strong>
+                <span>Ambientes</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projetos">
+        <div class="container">
+          <div class="carousel-head">
+            <div class="section-heading compact-heading">
+              <p class="section-kicker">Projetos</p>
+              <h2>Projetos em destaque.</h2>
+            </div>
+
+            <div class="carousel-actions" aria-label="Controles do carrossel">
+              <button
+                class="icon-button"
+                type="button"
+                data-carousel-prev
+                aria-label="Projeto anterior"
+              >
+                ‹
+              </button>
+              <button
+                class="icon-button"
+                type="button"
+                data-carousel-next
+                aria-label="Próximo projeto"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+
+          <div class="project-carousel" data-carousel>
+            <article
+              class="project-card amigo-solidario-card"
+              style="
+                --project-accent: #1e50d7;
+                --project-accent-dark: #101827;
+                --project-accent-rgb: 30, 80, 215;
+              "
+            >
+              <h3>Amigo Solidário</h3>
+              <div class="project-cover">
+                <picture>
+                  <source
+                    srcset="images/project-covers/optimized/amigo-solidario.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="images/project-covers/originals/amigo-solidario.png"
+                    alt="Capa do projeto Amigo Solidário"
+                    loading="lazy"
+                  />
+                </picture>
+                <span class="project-cover-overlay">
+                  Projeto social em desenvolvimento, pensado para conectar
+                  iniciativas, apoio comunitário e ações solidárias em uma
+                  experiência digital moderna e acessível.
+                </span>
+              </div>
+              <div class="project-meta">
+                <span><img src="assets/icons/typescript.svg" alt="" /> TypeScript</span>
+                <span><img src="assets/icons/nodejs.svg" alt="" /> Node.js</span>
+                <span><img src="assets/icons/react.svg" alt="" /> React</span>
+                <span><img src="assets/icons/vite.svg" alt="" /> Vite</span>
+                <span><img src="assets/icons/tailwindcss.svg" alt="" /> Tailwind CSS</span>
+                <span><img src="assets/icons/nextjs.svg" alt="" /> Next.js</span>
+                <span><img src="assets/icons/prisma.svg" alt="" /> Prisma</span>
+                <span><img src="assets/icons/postgresql.svg" alt="" /> PostgreSQL</span>
+                <span><img src="assets/icons/docker.svg" alt="" /> Docker</span>
+              </div>
+              <button
+                class="project-link is-disabled"
+                type="button"
+                disabled
+                aria-disabled="true"
+              >
+                Acessar site
+              </button>
+            </article>
+
+            <article
+              class="project-card"
+              style="
+                --project-accent: #0d3b66;
+                --project-accent-dark: #071d33;
+                --project-accent-rgb: 13, 59, 102;
+              "
+            >
+              <h3>Service Desk STI</h3>
+              <a
+                class="project-cover"
+                href="https://service-desk-sti.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir Service Desk STI"
+              >
+                <picture>
+                  <source
+                    srcset="images/project-covers/optimized/service-desk-sti.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="images/project-covers/originals/service-desk-sti.png"
+                    alt="Capa do projeto Service Desk STI"
+                    loading="lazy"
+                  />
+                </picture>
+                <span class="project-cover-overlay">
+                  Sistema de service desk para organizar chamados, atendimento e
+                  processos internos com backend Django e banco PostgreSQL.
+                </span>
+              </a>
+              <div class="project-meta">
+                <span><img src="assets/icons/python.svg" alt="" /> Python</span>
+                <span><img src="assets/icons/django.svg" alt="" /> Django</span>
+                <span><img src="assets/icons/html5.svg" alt="" /> HTML</span>
+                <span><img src="assets/icons/css3.svg" alt="" /> CSS</span>
+                <span
+                  ><img src="assets/icons/javascript.svg" alt="" />
+                  JavaScript</span
+                >
+                <span
+                  ><img src="assets/icons/postgresql.svg" alt="" />
+                  PostgreSQL</span
+                >
+                <span><img src="assets/icons/vercel.svg" alt="" /> Vercel</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://service-desk-sti.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+                >Acessar site</a
+              >
+            </article>
+
+            <article
+              class="project-card"
+              style="
+                --project-accent: #ff315c;
+                --project-accent-dark: #14090d;
+                --project-accent-rgb: 255, 49, 92;
+              "
+            >
+              <h3>Barbearia CH Site Oficial</h3>
+              <a
+                class="project-cover"
+                href="https://barbearia-ch-site-oficial.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir Barbearia CH Site Oficial"
+              >
+                <picture>
+                  <source
+                    srcset="images/project-covers/optimized/barbearia-ch-site-oficial.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="images/project-covers/originals/barbearia-ch-site-oficial.png"
+                    alt="Capa do projeto Barbearia CH Site Oficial"
+                    loading="lazy"
+                  />
+                </picture>
+                <span class="project-cover-overlay">
+                  Site oficial com interface moderna, stack full stack e
+                  estrutura preparada para dados, serviços e deploy profissional.
+                </span>
+              </a>
+              <div class="project-meta">
+                <span><img src="assets/icons/react.svg" alt="" /> React</span>
+                <span
+                  ><img src="assets/icons/typescript.svg" alt="" />
+                  TypeScript</span
+                >
+                <span
+                  ><img src="assets/icons/vite.svg" alt="" />
+                  Vite</span
+                >
+                <span
+                  ><img src="assets/icons/tailwindcss.svg" alt="" />
+                  Tailwind CSS</span
+                >
+                <span><img src="assets/icons/python.svg" alt="" /> Python</span>
+                <span><img src="assets/icons/django.svg" alt="" /> Django</span>
+                <span
+                  ><img src="assets/icons/postgresql.svg" alt="" />
+                  PostgreSQL</span
+                >
+                <span><img src="assets/icons/docker.svg" alt="" /> Docker</span>
+                <span><img src="assets/icons/vercel.svg" alt="" /> Vercel</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://barbearia-ch-site-oficial.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                >Acessar site</a
+              >
+            </article>
+
+            <article
+              class="project-card"
+              style="
+                --project-accent: #ff315c;
+                --project-accent-dark: #050505;
+                --project-accent-rgb: 255, 49, 92;
+              "
+            >
+              <h3>Barbearia CH Landing Page</h3>
+              <a
+                class="project-cover"
+                href="https://barbearia-ch.netlify.app"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir Barbearia CH Landing Page"
+              >
+                <picture>
+                  <source
+                    srcset="images/project-covers/optimized/barbearia-ch-landing-page.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="images/project-covers/originals/barbearia-ch-landing-page.png"
+                    alt="Capa do projeto Barbearia CH Landing Page"
+                    loading="lazy"
+                  />
+                </picture>
+                <span class="project-cover-overlay">
+                  Landing page responsiva para apresentação da Barbearia CH, com
+                  foco em navegação simples, comunicação objetiva e contato rápido.
+                </span>
+              </a>
+              <div class="project-meta">
+                <span
+                  ><img src="assets/icons/html5.svg" alt="" />
+                  HTML</span
+                >
+                <span
+                  ><img src="assets/icons/css3.svg" alt="" />
+                  CSS</span
+                >
+                <span
+                  ><img src="assets/icons/javascript.svg" alt="" />
+                  JavaScript</span
+                >
+                <span><img src="assets/icons/netlify.svg" alt="" /> Netlify</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://barbearia-ch.netlify.app"
+                target="_blank"
+                rel="noreferrer"
+                >Acessar site</a
+              >
+            </article>
+
+            <article
+              class="project-card"
+              style="
+                --project-accent: #ff5aa5;
+                --project-accent-dark: #26112e;
+                --project-accent-rgb: 255, 90, 165;
+              "
+            >
+              <h3>Raio-X Emocional PSI</h3>
+              <a
+                class="project-cover"
+                href="https://raio-x-emocional-psi.netlify.app"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir Raio-X Emocional PSI"
+              >
+                <picture>
+                  <source
+                    srcset="images/project-covers/optimized/raio-x-emocional-psi.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="images/project-covers/originals/raio-x-emocional-psi.png"
+                    alt="Capa do projeto Raio-X Emocional PSI"
+                    loading="lazy"
+                  />
+                </picture>
+                <span class="project-cover-overlay">
+                  Landing page publicada na Netlify, construída com HTML, CSS e
+                  JavaScript para apresentar uma oferta de forma clara e direta.
+                </span>
+              </a>
+              <div class="project-meta">
+                <span
+                  ><img src="assets/icons/html5.svg" alt="" />
+                  HTML</span
+                >
+                <span
+                  ><img src="assets/icons/css3.svg" alt="" />
+                  CSS</span
+                >
+                <span
+                  ><img src="assets/icons/javascript.svg" alt="" />
+                  JavaScript</span
+                >
+                <span><img src="assets/icons/netlify.svg" alt="" /> Netlify</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://raio-x-emocional-psi.netlify.app"
+                target="_blank"
+                rel="noreferrer"
+                >Acessar site</a
+              >
+            </article>
+
+          </div>
+
+          <div class="github-strip">
+            <p>Projetos publicados em Vercel e Netlify.</p>
+            <a
+              class="button secondary"
+              href="https://github.com/pedroaug-dev"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section areas-section" id="areas" data-carousel-scope>
+        <div class="container">
+          <div class="carousel-head">
+            <div class="section-heading compact-heading">
+              <p class="section-kicker">Áreas de atuação</p>
+              <h2>Onde posso contribuir.</h2>
+            </div>
+
+            <div class="carousel-actions" aria-label="Controles das áreas">
+              <button
+                class="icon-button"
+                type="button"
+                data-carousel-prev
+                aria-label="Área anterior"
+              >
+                ‹
+              </button>
+              <button
+                class="icon-button"
+                type="button"
+                data-carousel-next
+                aria-label="Próxima área"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+
+          <div class="area-carousel" data-carousel>
+            <article class="service-card">
+              <span class="icon-badge"
+                ><svg class="icon"><use href="#icon-code"></use></svg
+              ></span>
+              <h3>Sites com interfaces</h3>
+              <p>Experiências claras, profissionais e responsivas.</p>
+              <div class="stack-icon-row" aria-label="Stack de interfaces">
+                <span><img src="assets/icons/html5.svg" alt="" />HTML5</span>
+                <span><img src="assets/icons/css3.svg" alt="" />CSS3</span>
+                <span><img src="assets/icons/javascript.svg" alt="" />JavaScript</span>
+                <span><img src="assets/icons/react.svg" alt="" />React</span>
+                <span><img src="assets/icons/typescript.svg" alt="" />TypeScript</span>
+                <span><img src="assets/icons/nextjs.svg" alt="" />Next.js</span>
+                <span><img src="assets/icons/tailwindcss.svg" alt="" />Tailwind CSS</span>
+                <span><img src="assets/icons/vite.svg" alt="" />Vite</span>
+                <span><img src="assets/icons/vercel.svg" alt="" />Vercel</span>
+                <span><img src="assets/icons/netlify.svg" alt="" />Netlify</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <span class="icon-badge"
+                ><svg class="icon"><use href="#icon-server"></use></svg
+              ></span>
+              <h3>Backends e APIs</h3>
+              <p>Rotas, regras de negócio e integração entre sistemas.</p>
+              <div class="stack-icon-row" aria-label="Stack de backend">
+                <span><img src="assets/icons/nodejs.svg" alt="" />Node.js</span>
+                <span><img src="assets/icons/python.svg" alt="" />Python</span>
+                <span><img src="assets/icons/django.svg" alt="" />Django</span>
+                <span><img src="assets/icons/postgresql.svg" alt="" />PostgreSQL</span>
+                <span><img src="assets/icons/mysql.svg" alt="" />MySQL</span>
+                <span><img src="assets/icons/docker.svg" alt="" />Docker</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <span class="icon-badge"
+                ><svg class="icon"><use href="#icon-database"></use></svg
+              ></span>
+              <h3>Análise de dados</h3>
+              <p>Tratamento, consultas e leitura de indicadores.</p>
+              <div class="stack-icon-row" aria-label="Stack de dados">
+                <span><img src="assets/icons/python.svg" alt="" />Python</span>
+                <span><img src="assets/icons/pandas.svg" alt="" />Pandas</span>
+                <span><img src="assets/icons/postgresql.svg" alt="" />PostgreSQL</span>
+                <span><img src="assets/icons/mysql.svg" alt="" />MySQL</span>
+                <span><img src="assets/icons/django.svg" alt="" />Django</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <span class="icon-badge"
+                ><svg class="icon"><use href="#icon-layers"></use></svg
+              ></span>
+              <h3>Modelagem de dados</h3>
+              <p>Estruturas consistentes para aplicações web.</p>
+              <div class="stack-icon-row" aria-label="Stack de modelagem">
+                <span><img src="assets/icons/postgresql.svg" alt="" />PostgreSQL</span>
+                <span><img src="assets/icons/mysql.svg" alt="" />MySQL</span>
+                <span><img src="assets/icons/django.svg" alt="" />Django ORM</span>
+                <span><img src="assets/icons/python.svg" alt="" />Python</span>
+                <span><img src="assets/icons/pandas.svg" alt="" />Pandas</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <span class="icon-badge"
+                ><svg class="icon"><use href="#icon-database"></use></svg
+              ></span>
+              <h3>Banco de dados</h3>
+              <p>PostgreSQL e MySQL para persistência, consultas e organização.</p>
+              <div class="stack-icon-row" aria-label="Stack de banco de dados">
+                <span><img src="assets/icons/postgresql.svg" alt="" />PostgreSQL</span>
+                <span><img src="assets/icons/mysql.svg" alt="" />MySQL</span>
+                <span><img src="assets/icons/docker.svg" alt="" />Docker</span>
+                <span><img src="assets/icons/django.svg" alt="" />Django</span>
+                <span><img src="assets/icons/python.svg" alt="" />Python</span>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <span class="icon-badge"
+                ><svg class="icon"><use href="#icon-tool"></use></svg
+              ></span>
+              <h3>Deploy e ambientes</h3>
+              <p>Publicação, hospedagem e ambientes consistentes para entrega.</p>
+              <div class="stack-icon-row" aria-label="Stack de deploy e ambientes">
+                <span><img src="assets/icons/vercel.svg" alt="" />Vercel</span>
+                <span><img src="assets/icons/netlify.svg" alt="" />Netlify</span>
+                <span><img src="assets/icons/docker.svg" alt="" />Docker</span>
+                <span><img src="assets/icons/vite.svg" alt="" />Vite</span>
+                <span><img src="assets/icons/nextjs.svg" alt="" />Next.js</span>
+                <span><img src="assets/icons/nodejs.svg" alt="" />Node.js</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section proof-section" id="formacao" data-carousel-scope>
+        <div class="container">
+          <div class="carousel-head">
+            <div class="section-heading compact-heading">
+              <p class="section-kicker">Formação</p>
+              <h2>Evolução acadêmica e profissional.</h2>
+            </div>
+
+            <div class="carousel-actions" aria-label="Controles da formação">
+              <button
+                class="icon-button"
+                type="button"
+                data-carousel-prev
+                aria-label="Bloco anterior"
+              >
+                ‹
+              </button>
+              <button
+                class="icon-button"
+                type="button"
+                data-carousel-next
+                aria-label="Próximo bloco"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+
+          <div class="formation-carousel" data-carousel>
+            <article class="formation-card" data-carousel-scope>
+              <span class="icon-badge"
+                ><svg class="icon"><use href="#icon-tool"></use></svg
+              ></span>
+              <h3>Certificados</h3>
+              <p>Complementos técnicos aplicados ao desenvolvimento e dados.</p>
+
+              <div class="record-head">
+                <span>4 registros</span>
+                <div class="record-actions" aria-label="Controles dos certificados">
+                  <button
+                    class="icon-button compact"
+                    type="button"
+                    data-carousel-prev
+                    aria-label="Certificado anterior"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    class="icon-button compact"
+                    type="button"
+                    data-carousel-next
+                    aria-label="Próximo certificado"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+
+              <div class="record-carousel certificate-record-carousel" data-carousel>
+                <article class="record-card">
+                  <figure class="record-media">
+                    <picture>
+                      <source
+                        srcset="images/records/optimized/alura-iniciante-programacao.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="images/records/originals/alura-iniciante-programacao.png"
+                        alt="Certificado Alura Iniciante em Programação"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </figure>
+                  <div class="record-copy">
+                    <strong>Iniciante em Programação</strong>
+                    <span>Alura</span>
+                  </div>
+                  <button
+                    class="record-more"
+                    type="button"
+                    data-detail-id="certificado-alura-programacao"
+                  >
+                    Ver mais
+                  </button>
+                </article>
+
+                <article class="record-card">
+                  <figure class="record-media">
+                    <picture>
+                      <source
+                        srcset="images/records/optimized/fundacao-bradesco.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="images/records/originals/fundacao-bradesco.png"
+                        alt="Certificado Fundação Bradesco"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </figure>
+                  <div class="record-copy">
+                    <strong>Fundação Bradesco</strong>
+                    <span>Escola Virtual</span>
+                  </div>
+                  <button
+                    class="record-more"
+                    type="button"
+                    data-detail-id="certificado-fundacao-bradesco"
+                  >
+                    Ver mais
+                  </button>
+                </article>
+
+                <article class="record-card">
+                  <figure class="record-media">
+                    <picture>
+                      <source
+                        srcset="images/records/optimized/google-cybersecurity.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="images/records/originals/google-cybersecurity.png"
+                        alt="Certificado Google Cybersecurity"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </figure>
+                  <div class="record-copy">
+                    <strong>Google Cybersecurity</strong>
+                    <span>Coursera</span>
+                  </div>
+                  <button
+                    class="record-more"
+                    type="button"
+                    data-detail-id="certificado-google-cybersecurity"
+                  >
+                    Ver mais
+                  </button>
+                </article>
+
+                <article class="record-card">
+                  <figure class="record-media">
+                    <picture>
+                      <source
+                        srcset="images/records/optimized/google-it-support.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="images/records/originals/google-it-support.png"
+                        alt="Certificado Google IT Support"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </figure>
+                  <div class="record-copy">
+                    <strong>Google IT Support</strong>
+                    <span>Coursera</span>
+                  </div>
+                  <button
+                    class="record-more"
+                    type="button"
+                    data-detail-id="certificado-google-it-support"
+                  >
+                    Ver mais
+                  </button>
+                </article>
+              </div>
+            </article>
+
+            <article class="formation-card" data-carousel-scope>
+              <span class="icon-badge"
+                ><svg class="icon"><use href="#icon-code"></use></svg
+              ></span>
+              <h3>Formações</h3>
+              <p>Base acadêmica conectada à evolução técnica.</p>
+
+              <div class="record-head">
+                <span>2 registros</span>
+                <div class="record-actions" aria-label="Controles das formações">
+                  <button
+                    class="icon-button compact"
+                    type="button"
+                    data-carousel-prev
+                    aria-label="Formação anterior"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    class="icon-button compact"
+                    type="button"
+                    data-carousel-next
+                    aria-label="Próxima formação"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+
+              <div class="record-carousel formation-record-carousel" data-carousel>
+                <article class="record-card">
+                  <figure class="record-media square formation-media">
+                    <picture>
+                      <source
+                        srcset="images/records/optimized/unifimes.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="images/records/originals/unifimes.png"
+                        alt="Logo UniFIMES"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </figure>
+                  <div class="record-copy">
+                    <strong>UNIFIMES</strong>
+                    <span>Formação acadêmica e fundamentos técnicos.</span>
+                  </div>
+                  <button
+                    class="record-more"
+                    type="button"
+                    data-detail-id="formacao-unifimes"
+                  >
+                    Ver mais
+                  </button>
+                </article>
+
+                <article class="record-card">
+                  <figure class="record-media square formation-media">
+                    <picture>
+                      <source
+                        srcset="images/records/optimized/unibf.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="images/records/originals/unibf.png"
+                        alt="Logo UniBF Faculdade"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </figure>
+                  <div class="record-copy">
+                    <strong>UniBF</strong>
+                    <span>Complementação e desenvolvimento profissional.</span>
+                  </div>
+                  <button
+                    class="record-more"
+                    type="button"
+                    data-detail-id="formacao-unibf"
+                  >
+                    Ver mais
+                  </button>
+                </article>
+              </div>
+            </article>
+
+            <article class="formation-card" data-carousel-scope>
+              <span class="icon-badge"
+                ><svg class="icon"><use href="#icon-server"></use></svg
+              ></span>
+              <h3>Experiências</h3>
+              <p>Vivências com processos, dados e tecnologia.</p>
+
+              <div class="record-head">
+                <span>3 registros</span>
+                <div class="record-actions" aria-label="Controles das experiências">
+                  <button
+                    class="icon-button compact"
+                    type="button"
+                    data-carousel-prev
+                    aria-label="Experiência anterior"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    class="icon-button compact"
+                    type="button"
+                    data-carousel-next
+                    aria-label="Próxima experiência"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+
+              <div class="record-carousel" data-carousel>
+                <article class="record-card">
+                  <figure class="record-media">
+                    <picture>
+                      <source
+                        srcset="images/records/optimized/sti.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="images/records/originals/sti.png"
+                        alt="Superintendência de Tecnologia da Informação"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </figure>
+                  <div class="record-copy">
+                    <strong>STI</strong>
+                    <span>Suporte técnico e soluções internas.</span>
+                  </div>
+                  <button
+                    class="record-more"
+                    type="button"
+                    data-detail-id="experiencia-sti"
+                  >
+                    Ver mais
+                  </button>
+                </article>
+
+                <article class="record-card">
+                  <figure class="record-media">
+                    <picture>
+                      <source
+                        srcset="images/records/optimized/cadastro-unico.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="images/records/originals/cadastro-unico.png"
+                        alt="Cadastro Único"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </figure>
+                  <div class="record-copy">
+                    <strong>Cadastro Único</strong>
+                    <span>Atendimento, dados e processos.</span>
+                  </div>
+                  <button
+                    class="record-more"
+                    type="button"
+                    data-detail-id="experiencia-cadastro-unico"
+                  >
+                    Ver mais
+                  </button>
+                </article>
+
+                <article class="record-card">
+                  <figure class="record-media wide">
+                    <picture>
+                      <source
+                        srcset="images/records/optimized/camara-mineiros.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="images/records/originals/camara-mineiros.png"
+                        alt="Câmara Municipal de Mineiros"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </figure>
+                  <div class="record-copy">
+                    <strong>Câmara Municipal</strong>
+                    <span>Rotinas institucionais e organização.</span>
+                  </div>
+                  <button
+                    class="record-more"
+                    type="button"
+                    data-detail-id="experiencia-camara-municipal"
+                  >
+                    Ver mais
+                  </button>
+                </article>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section career-section" id="objetivo">
+        <div class="container career-grid">
+          <div>
+            <p class="section-kicker">Objetivo</p>
+            <h2>Gerar impacto com tecnologia.</h2>
+            <p>
+              Busco oportunidades em desenvolvimento web e análise de dados,
+              contribuindo com produto, processos e decisões.
+            </p>
+          </div>
+
+          <div class="career-list">
+            <article>
+              <span>Atuação</span>
+              <strong>Web & Data Developer</strong>
+            </article>
+            <article>
+              <span>Oportunidade</span>
+              <strong>Estágio, vagas ou projetos</strong>
+            </article>
+            <article>
+              <span>Entrega</span>
+              <strong>Soluções web úteis e dados transformados em decisão</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contato">
+        <div class="container contact-grid contact-shell">
+          <div class="contact-copy">
+            <p class="section-kicker">Contato</p>
+            <h2>Vamos construir algo útil?</h2>
+            <p>
+              Aberto a oportunidades em desenvolvimento web, análise de dados e
+              projetos com impacto real.
+            </p>
+            <div class="contact-status">
+              <span></span>
+              Disponível para estágio, vagas e projetos
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a href="mailto:pedroaugustoguimaraesantos@gmail.com">
+              <span class="contact-icon"
+                ><svg class="icon mini"><use href="#icon-mail"></use></svg
+              ></span>
+              <span>
+                <small>Email</small>
+                <strong>pedroaugustoguimaraesantos@gmail.com</strong>
+              </span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/pedro-augusto-guimaraes-santos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="contact-icon"
+                ><svg class="icon mini"><use href="#icon-linkedin"></use></svg
+              ></span>
+              <span>
+                <small>LinkedIn</small>
+                <strong>Pedro Augusto Guimarães Santos</strong>
+              </span>
+            </a>
+            <a
+              href="https://github.com/pedroaug-dev"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="contact-icon"
+                ><svg class="icon mini"><use href="#icon-github"></use></svg
+              ></span>
+              <span>
+                <small>GitHub</small>
+                <strong>github.com/pedroaug-dev</strong>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section
+      class="detail-modal"
+      data-detail-modal
+      aria-hidden="true"
+      aria-labelledby="detail-title"
+      role="dialog"
+    >
+      <div class="detail-backdrop" data-detail-close></div>
+      <article class="detail-panel" role="document">
+        <button
+          class="detail-close"
+          type="button"
+          data-detail-close
+          aria-label="Fechar detalhes"
+        >
+          ×
+        </button>
+        <p class="section-kicker" data-detail-type></p>
+        <div class="detail-title-row">
+          <img class="detail-icon" data-detail-icon alt="" hidden />
+          <h2 id="detail-title" data-detail-title></h2>
+        </div>
+        <p class="detail-description" data-detail-description></p>
+        <dl class="detail-list" data-detail-list></dl>
+        <div class="detail-content" data-detail-content></div>
+      </article>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <span class="footer-brand">Pedro Augusto</span>
+          <p>Web & Data Developer.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#inicio">Início</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const detailRecords = {
+        "certificado-alura-programacao": {
+          type: "Certificado",
+          title: "Iniciante em Programação",
+          description:
+            "Formação complementar voltada aos fundamentos de programação, lógica, organização de código e primeiros passos no desenvolvimento web.",
+          fields: {
+            "Emitido por": "Alura",
+            "Data de início": "Não informado",
+            "Data de conclusão": "Não informado",
+            "Área": "Programação",
+          },
+        },
+        "certificado-fundacao-bradesco": {
+          type: "Certificado",
+          title: "Fundação Bradesco",
+          description:
+            "Certificação da Escola Virtual com foco em conhecimentos complementares para desenvolvimento profissional e tecnologia.",
+          fields: {
+            "Emitido por": "Escola Virtual Fundação Bradesco",
+            "Data de início": "Não informado",
+            "Data de conclusão": "Não informado",
+            "Área": "Tecnologia e desenvolvimento profissional",
+          },
+        },
+        "certificado-google-cybersecurity": {
+          type: "Certificado",
+          title: "Google Cybersecurity",
+          description:
+            "Programa de certificação com base em segurança da informação, boas práticas de proteção, análise de riscos e fundamentos de cibersegurança.",
+          fields: {
+            "Emitido por": "Google / Coursera",
+            "Data de início": "Não informado",
+            "Data de conclusão": "Não informado",
+            "Área": "Cibersegurança",
+          },
+        },
+        "certificado-google-it-support": {
+          type: "Certificado",
+          title: "Google IT Support",
+          description:
+            "Certificação voltada a suporte de TI, atendimento técnico, infraestrutura, sistemas operacionais e resolução de problemas.",
+          fields: {
+            "Emitido por": "Google / Coursera",
+            "Data de início": "Não informado",
+            "Data de conclusão": "Não informado",
+            "Área": "Suporte de TI",
+          },
+        },
+        "formacao-unifimes": {
+          type: "Formação",
+          title: "UNIFIMES",
+          description:
+            "Formação acadêmica usada como base para evolução técnica, construção de fundamentos e desenvolvimento de visão profissional.",
+          fields: {
+            "Nome da formação": "Não informado",
+            Duração: "Não informado",
+            Instituição: "UNIFIMES",
+            Status: "Não informado",
+          },
+        },
+        "formacao-unibf": {
+          type: "Formação",
+          title: "UniBF",
+          description:
+            "Formação complementar voltada ao desenvolvimento profissional e ampliação da base de conhecimento técnico.",
+          fields: {
+            "Nome da formação": "Não informado",
+            Duração: "Não informado",
+            Instituição: "UniBF Faculdade",
+            Status: "Não informado",
+          },
+        },
+        "experiencia-camara-municipal": {
+          type: "Experiência",
+          title: "Câmara Municipal",
+          description:
+            "Vivência em rotinas institucionais, organização de processos, apoio operacional e contato com fluxos administrativos.",
+          fields: {
+            Cargo: "Não informado",
+            Unidade: "Câmara Municipal de Mineiros",
+            Início: "Não informado",
+            Fim: "Não informado",
+          },
+        },
+        "experiencia-cadastro-unico": {
+          type: "Experiência",
+          title: "Cadastro Único",
+          description:
+            "Atuação com atendimento, organização de informações, conferência de dados e suporte a processos de cadastro.",
+          fields: {
+            Cargo: "Não informado",
+            Unidade: "Cadastro Único",
+            Início: "Não informado",
+            Fim: "Não informado",
+          },
+        },
+        "experiencia-sti": {
+          type: "Experiência",
+          title: "STI",
+          description:
+            "Experiência com suporte técnico, organização de demandas, solução de problemas internos e apoio a rotinas de tecnologia da informação.",
+          fields: {
+            Cargo: "Não informado",
+            Unidade: "Superintendência de Tecnologia da Informação",
+            Início: "Não informado",
+            Fim: "Não informado",
+          },
+        },
+      };
+
+      Object.assign(detailRecords, {
+        "certificado-alura-programacao": {
+          type: "Certificado",
+          title: "Trilha Alura — Iniciante em Programação",
+          iconUrl:
+            "https://play-lh.googleusercontent.com/yDjaHCaOn_O89vnY7eOKH6ElEBtJrmN2CSI4yhiP1_GVC2zrxXWSFGxO0lt9-CU0mV4",
+          description:
+            "Certificação voltada à construção de uma base sólida em desenvolvimento de software, com foco em lógica computacional, resolução de problemas, variáveis, funções, estruturas condicionais e laços de repetição.",
+          fields: {
+            "Emitido por": "Alura",
+            "Emitida em": "mai de 2026",
+            "Código da credencial": "f3d787f5-2d2d-41c8-bcff-75a70d0bb5cb",
+            "Área": "Programação",
+          },
+          credentialUrl:
+            "https://cursos.alura.com.br/degree/certificate/f3d787f5-2d2d-41c8-bcff-75a70d0bb5cb?lang",
+          sections: [
+            {
+              heading: "Descrição completa",
+              paragraphs: [
+                "A trilha Iniciante em Programação certifica o desenvolvimento de fundamentos essenciais para começar na área de tecnologia, passando por lógica de programação, resolução de problemas, variáveis, funções, estruturas condicionais, laços de repetição e organização do raciocínio computacional.",
+              ],
+            },
+          ],
+          skills: [
+            "Lógica de Programação",
+            "Resolução de Problemas",
+            "Estruturas Condicionais",
+            "Laços de Repetição",
+          ],
+        },
+        "certificado-fundacao-bradesco": {
+          type: "Certificado",
+          title: "Trilha de Conhecimento — Linguagem de Programação Python",
+          iconUrl:
+            "https://www.google.com/s2/favicons?domain=fundacao.bradesco&sz=128",
+          description:
+            "Certificado da Trilha de Programação Python pela Fundação Bradesco, com conteúdos sobre lógica de programação, algoritmos, variáveis, operadores, estruturas condicionais e fundamentos da linguagem.",
+          fields: {
+            "Emitido por": "Fundação Bradesco",
+            "Emitida em": "dez de 2025",
+            "Área": "Linguagem de Programação Python",
+            "Tipo": "Trilha de Conhecimento",
+          },
+          credentialUrl:
+            "https://lms.ev.org.br/mpls/Web/Lms/Track/TrackCertificateDownload.ashx?uid=12889695&p=09uIeWyMF3Yvxcy2y0D1K2oV4iXMQ4mEE%252f9wIZC3iftnOi1wfNHXH2%252fhQKDN%252f5b3tMNAmF6Tcyg%253d",
+          sections: [
+            {
+              heading: "Descrição completa",
+              paragraphs: [
+                "Certificado da Trilha de Programação Python pela Fundação Bradesco. Conteúdos abordados incluem lógica de programação, algoritmos, variáveis, operadores, estruturas condicionais e fundamentos de programação orientada a objetos com Python.",
+                "O conteúdo programático apresenta a trilha, seu objetivo formativo e os certificados que a compõem, reforçando competências práticas para desenvolvimento com Python.",
+              ],
+            },
+          ],
+          skills: [
+            "Lógica de Programação",
+            "Estruturas de Controle",
+            "Programação Orientada a Objetos (POO) com Python",
+            "Algoritmos",
+          ],
+        },
+        "certificado-google-cybersecurity": {
+          type: "Certificado",
+          title:
+            "Google Cybersecurity — Fundamentos e Operações em Segurança da Informação",
+          iconUrl: "https://www.google.com/s2/favicons?domain=google.com&sz=128",
+          description:
+            "Certificado profissional em cibersegurança com foco em fundamentos e práticas essenciais, incluindo gestão de riscos, segurança da informação e proteção de ativos digitais.",
+          fields: {
+            "Emitido por": "Google / Coursera",
+            "Emitida em": "nov de 2025",
+            "Código da credencial": "PXQYMAV6KEBJ",
+            "Área": "Cibersegurança",
+          },
+          credentialUrl:
+            "https://www.coursera.org/account/accomplishments/specialization/PXQYMAV6KEBJ",
+          sections: [
+            {
+              heading: "Descrição completa",
+              paragraphs: [
+                "Google Cybersecurity Professional Certificate com foco em fundamentos e práticas essenciais de cibersegurança, incluindo gestão de riscos, segurança da informação e proteção de ativos digitais.",
+                "A formação abrange conceitos operacionais de segurança, identificação de riscos, ameaças e vulnerabilidades, além de práticas relacionadas a monitoramento, análise e resposta em ambientes de tecnologia.",
+              ],
+            },
+          ],
+          skills: [
+            "Gestão de Riscos e Segurança da Informação",
+            "Monitoramento e Análise de Ameaças (SIEM)",
+            "Segurança da Informação",
+            "Proteção de Ativos Digitais",
+          ],
+        },
+        "certificado-google-it-support": {
+          type: "Certificado",
+          title:
+            "Google IT Support — Fundamentos e Suporte Técnico em Infraestrutura de TI",
+          iconUrl: "https://www.google.com/s2/favicons?domain=google.com&sz=128",
+          description:
+            "Certificado profissional emitido pelo Google por meio da plataforma Coursera, comprovando a conclusão do programa Google IT Support.",
+          fields: {
+            "Emitido por": "Google / Coursera",
+            "Emitida em": "abr de 2026",
+            "Código da credencial": "BSVM9P3FTGII",
+            "Área": "Suporte Técnico e Infraestrutura de TI",
+          },
+          credentialUrl:
+            "https://www.coursera.org/account/accomplishments/specialization/BSVM9P3FTGII",
+          sections: [
+            {
+              heading: "Descrição completa",
+              paragraphs: [
+                "Google IT Support Professional Certificate — Conclusão. Certificado profissional emitido pelo Google, por meio da plataforma Coursera, comprovando a conclusão do programa Google IT Support.",
+                "A formação abrange fundamentos de suporte técnico, redes de computadores, conectividade, troubleshooting em TI, sistemas operacionais, administração de sistemas e serviços de infraestrutura.",
+              ],
+            },
+          ],
+          skills: [
+            "Suporte Técnico",
+            "Troubleshooting em TI",
+            "Redes de Computadores",
+            "Conectividade",
+          ],
+        },
+        "formacao-unifimes": {
+          type: "Formação",
+          title: "Centro Universitário de Mineiros",
+          iconUrl: "images/records/originals/unifimes.png",
+          description:
+            "Bacharelado em Sistemas de Informação com formação sólida em desenvolvimento de software, infraestrutura de TI e gestão de sistemas.",
+          fields: {
+            "Nome da formação": "Bacharel em Sistemas de Informação",
+            Duração: "jan de 2024 — dez de 2027",
+            Instituição: "Centro Universitário de Mineiros",
+            Status: "Cursando",
+          },
+          sections: [
+            {
+              heading: "Atividades e grupos",
+              paragraphs: [
+                "Participação em projetos acadêmicos e atividades práticas com foco em desenvolvimento de sistemas, integração de tecnologias e resolução de problemas. Experiência em projetos integradores utilizando conceitos de programação, banco de dados e engenharia de software, com ênfase em trabalho em equipe, organização e pensamento analítico.",
+              ],
+            },
+            {
+              heading: "Descrição completa",
+              paragraphs: [
+                "Bacharelado em Sistemas de Informação com formação sólida em desenvolvimento de software, infraestrutura de TI e gestão de sistemas, abrangendo fundamentos de programação, lógica, estruturas de dados, banco de dados, análise e modelagem de sistemas.",
+              ],
+            },
+          ],
+          skills: [
+            "Desenvolvimento de sistemas",
+            "Análise e Modelagem de Sistemas",
+            "Banco de dados",
+            "Engenharia de software",
+          ],
+        },
+        "formacao-unibf": {
+          type: "Formação",
+          title: "Faculdade UniBF",
+          iconUrl: "assets/record-icons/unibf-transparent.png",
+          description:
+            "Formação orientada à preparação de profissionais para atuação na administração pública, com foco em gestão de políticas públicas, planejamento estratégico e eficiência na prestação de serviços à sociedade.",
+          fields: {
+            "Nome da formação": "Tecnólogo em Gestão Pública",
+            Duração: "jul de 2025 — jun de 2027",
+            Instituição: "Faculdade UniBF",
+            Status: "Em andamento",
+          },
+          sections: [
+            {
+              heading: "Atividades e grupos",
+              paragraphs: [
+                "Participação em atividades voltadas à análise e gestão de políticas públicas, planejamento e execução de projetos, gestão administrativa e organizacional, estudo de legislação e governança, além do desenvolvimento de relatórios e análises estratégicas, com foco em eficiência, transparência e melhoria contínua na gestão pública.",
+              ],
+            },
+            {
+              heading: "Descrição completa",
+              paragraphs: [
+                "Formação orientada à preparação de profissionais para atuação na administração pública, com foco em gestão de políticas públicas, planejamento estratégico e eficiência na prestação de serviços à sociedade.",
+              ],
+            },
+          ],
+          skills: [
+            "Gestão de Políticas Públicas",
+            "Impacto Social",
+            "Planejamento Estratégico no Setor Público",
+            "Governança",
+          ],
+        },
+        "experiencia-camara-municipal": {
+          type: "Experiência",
+          title: "Câmara Municipal de Mineiros",
+          iconUrl: "assets/record-icons/camara-municipal-transparent.png",
+          description:
+            "Experiência em atividades administrativas e de gabinete, com atuação em atendimento ao público, organização de demandas, processos legislativos e rotinas institucionais.",
+          fields: {
+            Unidade: "Câmara Municipal de Mineiros",
+            Local: "Mineiros, Goiás, Brasil",
+            Vínculo: "Tempo integral",
+            Período: "mar de 2024 — ago de 2025",
+          },
+          sections: [
+            {
+              heading: "Assessor Parlamentar (Gabinete)",
+              meta: "jan de 2025 — ago de 2025 · 8 meses",
+              paragraphs: [
+                "Atuação no gabinete com foco no atendimento ao público e suporte às atividades legislativas, realizando a triagem, orientação e encaminhamento de demandas da população com clareza, empatia e eficiência, garantindo organização no fluxo de solicitações e qualidade no atendimento institucional.",
+                "Prestando apoio direto ao vereador nas rotinas institucionais e legislativas, contribuindo para a organização, priorização e acompanhamento das demandas do gabinete, assegurando maior agilidade e assertividade na tomada de decisões e no fluxo de informações.",
+                "Atuante na comunicação e alinhamento com a equipe de assessores, promovendo integração entre as atividades internas, organização das demandas e acompanhamento contínuo das solicitações, atuando de forma colaborativa e mantendo um ambiente de trabalho produtivo, com foco em eficiência e resultado.",
+              ],
+            },
+            {
+              heading: "Assessor Parlamentar (Administrativo)",
+              meta: "mar de 2024 — dez de 2024 · 10 meses",
+              paragraphs: [
+                "Atuação na área administrativa com foco na organização, controle e tramitação de processos públicos, contribuindo para a eficiência operacional e conformidade com normas institucionais e legais. Responsável pela elaboração e acompanhamento de empenhos e registros administrativos, bem como pela condução de processos de contratação pública, incluindo dispensa de licitação, licitação e inexigibilidade, assegurando o cumprimento dos procedimentos formais e prazos estabelecidos.",
+                "Atuação na conferência de orçamentos, análise de propostas e apoio na formalização de demandas de compra, garantindo consistência das informações e aderência aos critérios estabelecidos. Utilização do sistema Prodata para registro, acompanhamento e gestão do fluxo de processos administrativos, controle de compromissos orçamentários, movimentação documental e suporte à gestão de compras e contratos públicos.",
+                "Responsável também pela organização, conferência e atualização de planilhas e documentos administrativos, promovendo maior controle, consistência e confiabilidade das informações, além de contribuir para a padronização de rotinas e melhoria contínua dos processos internos.",
+              ],
+            },
+          ],
+          skills: [
+            "Atendimento ao Público",
+            "Gestão de Demandas",
+            "Comunicação Institucional e Interpessoal",
+            "Gestão de Processos Administrativos",
+            "Licitações e Contratações Públicas",
+          ],
+        },
+        "experiencia-cadastro-unico": {
+          type: "Experiência",
+          title: "Cadastro Único",
+          iconUrl: "assets/record-icons/cadastro-unico-transparent.png",
+          description:
+            "Atuação na área de Assistência Social com foco na gestão e atualização de dados no Cadastro Único para Programas Sociais do Governo Federal.",
+          fields: {
+            Cargo: "Agente Administrativo",
+            Unidade: "Cadastro Único / Assistência Social",
+            Início: "ago de 2025",
+            Fim: "fev de 2026",
+          },
+          sections: [
+            {
+              heading: "Descrição completa",
+              paragraphs: [
+                "Atuação na área de Assistência Social com foco na gestão e atualização de dados no Cadastro Único para Programas Sociais do Governo Federal.",
+                "Responsável pelo atendimento ao público, coleta e validação de informações socioeconômicas, garantindo a qualidade e integridade dos dados utilizados para concessão de benefícios sociais.",
+                "Experiência com rotinas administrativas, organização de documentos, suporte a demandas internas e orientação aos usuários sobre programas sociais.",
+              ],
+            },
+          ],
+          skills: [
+            "Atendimento Direto ao Cidadão",
+            "Atualização e Validação de Cadastros (CadÚnico)",
+            "Organização de documentos",
+            "Rotinas administrativas",
+          ],
+        },
+        "experiencia-sti": {
+          type: "Experiência",
+          title: "Superintendência de Tecnologia da Informação (STI)",
+          iconUrl: "assets/record-icons/sti-transparent.png",
+          description:
+            "Atuação em suporte técnico e sustentação de ambientes de TI na administração pública, com foco em estabilidade, continuidade de serviços e atendimento de chamados.",
+          fields: {
+            Cargo:
+              "Agente Administrativo - Superintendência de Tecnologia da Informação",
+            Unidade: "Prefeitura de Mineiros / STI",
+            Início: "fev de 2026",
+            Fim: "o momento",
+          },
+          sections: [
+            {
+              heading: "Descrição completa",
+              paragraphs: [
+                "Atuação em suporte técnico e sustentação de ambientes de TI na administração pública, com foco na estabilidade e continuidade dos serviços institucionais. Responsável pela gestão e atendimento de chamados (help desk), garantindo resolução eficiente de incidentes e suporte contínuo aos usuários.",
+                "Experiência na configuração e manutenção de redes locais (WLAN | LAN), incluindo conectividade, compartilhamentos, mapeamento de unidades e acesso a recursos corporativos. Atuação no gerenciamento de servidor de arquivos, com controle de permissões, organização de diretórios e padronização de acessos.",
+                "Responsável pela instalação, formatação e configuração de computadores, além da implantação e manutenção de sistemas operacionais Windows e softwares institucionais, assegurando padronização e funcionamento adequado dos ambientes.",
+                "Experiência na instalação e configuração de impressoras e scanners em rede, incluindo integração com estações de trabalho, compartilhamento e suporte aos usuários.",
+                "Vivência em diagnóstico e resolução de problemas de hardware e software, com atuação em suporte remoto e presencial, além do controle e organização de ativos de TI em ambiente corporativo de alta demanda operacional.",
+              ],
+            },
+          ],
+          skills: [
+            "Suporte Técnico Presencial e Remoto",
+            "Diagnóstico e Resolução de Problemas",
+            "Redes WLAN e LAN",
+            "Help desk",
+            "Manutenção de computadores",
+            "Gestão de ativos de TI",
+          ],
+        },
+      });
+
+      const detailModal = document.querySelector("[data-detail-modal]");
+      const detailTitle = document.querySelector("[data-detail-title]");
+      const detailIcon = document.querySelector("[data-detail-icon]");
+      const detailType = document.querySelector("[data-detail-type]");
+      const detailDescription = document.querySelector(
+        "[data-detail-description]",
+      );
+      const detailList = document.querySelector("[data-detail-list]");
+      const detailContent = document.querySelector("[data-detail-content]");
+      const closeDetailButtons = document.querySelectorAll("[data-detail-close]");
+      let lastFocusedElement = null;
+
+      const escapeHTML = (value) =>
+        String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+
+      const renderDetailSections = (record) => {
+        const sections = record.sections || [];
+        const credentialMarkup = record.credentialUrl
+          ? `
+              <a
+                class="detail-credential"
+                href="${escapeHTML(record.credentialUrl)}"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Exibir credencial
+              </a>
+            `
+          : "";
+        const sectionMarkup = sections
+          .map(
+            (section) => `
+              <section class="detail-section">
+                <h3>${escapeHTML(section.heading)}</h3>
+                ${
+                  section.meta
+                    ? `<span class="detail-meta">${escapeHTML(section.meta)}</span>`
+                    : ""
+                }
+                ${(section.paragraphs || [])
+                  .map((paragraph) => `<p>${escapeHTML(paragraph)}</p>`)
+                  .join("")}
+              </section>
+            `,
+          )
+          .join("");
+
+        const skillsMarkup = record.skills?.length
+          ? `
+              <section class="detail-section">
+                <h3>Competências</h3>
+                <div class="detail-tags">
+                  ${record.skills
+                    .map((skill) => `<span>${escapeHTML(skill)}</span>`)
+                    .join("")}
+                </div>
+              </section>
+            `
+          : "";
+
+        return `${credentialMarkup}${sectionMarkup}${skillsMarkup}`;
+      };
+
+      const openDetailModal = (record) => {
+        detailType.textContent = record.type;
+        detailTitle.textContent = record.title;
+        if (record.iconUrl) {
+          detailIcon.src = record.iconUrl;
+          detailIcon.alt = `Logomarca de ${record.title}`;
+          detailIcon.hidden = false;
+        } else {
+          detailIcon.removeAttribute("src");
+          detailIcon.alt = "";
+          detailIcon.hidden = true;
+        }
+        detailDescription.textContent = record.description;
+        detailList.innerHTML = Object.entries(record.fields)
+          .map(
+            ([label, value]) =>
+              `<div><dt>${escapeHTML(label)}</dt><dd>${escapeHTML(value)}</dd></div>`,
+          )
+          .join("");
+        detailContent.innerHTML = renderDetailSections(record);
+
+        detailModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("detail-open");
+        detailModal.querySelector(".detail-close").focus();
+      };
+
+      const closeDetailModal = () => {
+        detailModal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("detail-open");
+        lastFocusedElement?.focus();
+      };
+
+      document.querySelectorAll("[data-detail-id]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const record = detailRecords[button.dataset.detailId];
+
+          if (!record) {
+            return;
+          }
+
+          lastFocusedElement = button;
+          openDetailModal(record);
+        });
+      });
+
+      closeDetailButtons.forEach((button) => {
+        button.addEventListener("click", closeDetailModal);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (
+          event.key === "Escape" &&
+          detailModal.getAttribute("aria-hidden") === "false"
+        ) {
+          closeDetailModal();
+        }
+      });
+
+      const revealItems = document.querySelectorAll(
+        ".hero-copy, .hero-visual, .metrics article, .about-intro, .about-panel, .tech-card, .carousel-head, .project-card, .service-card, .formation-card, .record-more, .github-strip, .career-grid > div, .career-list article, .contact-copy, .contact-actions a, .footer-shell",
+      );
+
+      document.body.classList.add("reveal-ready");
+
+      revealItems.forEach((item, index) => {
+        item.dataset.reveal = "";
+        item.style.setProperty(
+          "--reveal-delay",
+          `${Math.min(index % 8, 7) * 70}ms`,
+        );
+      });
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) {
+                return;
+              }
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          { rootMargin: "0px 0px -10% 0px", threshold: 0.08 },
+        );
+
+        revealItems.forEach((item) => {
+          const isInFirstView =
+            item.getBoundingClientRect().top < window.innerHeight;
+
+          if (isInFirstView) {
+            item.classList.add("is-visible");
+            return;
+          }
+
+          revealObserver.observe(item);
+        });
+      } else {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+      }
+
+      const getCarouselScope = (element) =>
+        element.closest("[data-carousel-scope]") ||
+        element.closest(".section") ||
+        element.parentElement;
+
+      const findScopedCarousel = (scope) =>
+        Array.from(scope.querySelectorAll("[data-carousel]")).find(
+          (carousel) => getCarouselScope(carousel) === scope,
+        );
+
+      const scrollCarouselByCard = (carousel, direction) => {
+        const card = carousel.firstElementChild;
+        const gap = parseFloat(getComputedStyle(carousel).columnGap) || 18;
+        const amount = card ? card.getBoundingClientRect().width + gap : 320;
+        carousel.scrollBy({ left: direction * amount, behavior: "smooth" });
+      };
+
+      document
+        .querySelectorAll("[data-carousel-prev], [data-carousel-next]")
+        .forEach((button) => {
+          const scope = getCarouselScope(button);
+          const carousel = scope ? findScopedCarousel(scope) : null;
+
+          if (!carousel) {
+            return;
+          }
+
+          const direction = button.hasAttribute("data-carousel-prev") ? -1 : 1;
+          button.addEventListener("click", () =>
+            scrollCarouselByCard(carousel, direction),
+          );
+        });
+
+      document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+
+        let isDragging = false;
+        let startX = 0;
+        let startScrollLeft = 0;
+
+        carousel.addEventListener("pointerdown", (event) => {
+          if (event.target.closest("a, button")) {
+            return;
+          }
+
+          event.stopPropagation();
+          isDragging = true;
+          startX = event.clientX;
+          startScrollLeft = carousel.scrollLeft;
+          carousel.classList.add("is-dragging");
+          carousel.setPointerCapture(event.pointerId);
+        });
+
+        carousel.addEventListener("pointermove", (event) => {
+          if (!isDragging) {
+            return;
+          }
+
+          carousel.scrollLeft = startScrollLeft - (event.clientX - startX);
+        });
+
+        const stopDragging = () => {
+          isDragging = false;
+          carousel.classList.remove("is-dragging");
+        };
+
+        carousel.addEventListener("pointerup", stopDragging);
+        carousel.addEventListener("pointercancel", stopDragging);
+        carousel.addEventListener("mouseleave", stopDragging);
+      });
+    </script>
+  </body>
 </html>
